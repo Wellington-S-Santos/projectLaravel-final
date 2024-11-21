@@ -334,8 +334,8 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -509,8 +509,15 @@ class ComposerStaticInit626b9e7ddd47fb7eff9aaa53cce0c9ad
     );
 
     public static $classMap = array (
+        'App\\Http\\Controllers\\ContinentesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContinentesController.php',
+        'App\\Http\\Controllers\\Continentes_PaisesController' => __DIR__ . '/../..' . '/app/Http/Controllers/Continentes_PaisesController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Http\\Controllers\\InicioController' => __DIR__ . '/../..' . '/app/Http/Controllers/InicioController.php',
+        'App\\Http\\Controllers\\PaisesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PaisesController.php',
+        'App\\Models\\Continentes' => __DIR__ . '/../..' . '/app/Models/Continentes.php',
+        'App\\Models\\Continentes_Paises' => __DIR__ . '/../..' . '/app/Models/Continentes_Paises.php',
+        'App\\Models\\Inicio' => __DIR__ . '/../..' . '/app/Models/Inicio.php',
+        'App\\Models\\Paises' => __DIR__ . '/../..' . '/app/Models/Paises.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',

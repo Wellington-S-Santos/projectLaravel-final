@@ -18,8 +18,10 @@ return new class extends Migration {
             $table->timestamps();
     
             // Definindo as chaves estrangeiras
-            $table->foreign('continentes_id')->references('id')->on('continentes')->onDelete('cascade');
-            $table->foreign('paises_id')->references('id')->on('paises')->onDelete('cascade');
+            $table->foreign('continentes_id')->references('id')->on('continentes');
+            $table->foreign('paises_id')->references('id')->on('paises');
+
+            $table->unique(['continentes_id', 'paises_id']);
         });
     }
 

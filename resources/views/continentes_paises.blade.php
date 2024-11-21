@@ -20,8 +20,9 @@
             @foreach ($continentesPaises as $continentePais)
                 <tr>
                     <td>{{$continentePais->paises->name}}</td>
+                    <td>{{$continentePais->paises->tamanho}}</td>
                     <td>{{$continentePais->continentes->name}}</td>
-                    <td></td>
+                    <td>{{$continentePais->continentes->tamanho}}</td>
                 </tr>
             
             @endforeach

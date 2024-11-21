@@ -6,8 +6,15 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Http\\Controllers\\ContinentesController' => $baseDir . '/app/Http/Controllers/ContinentesController.php',
+    'App\\Http\\Controllers\\Continentes_PaisesController' => $baseDir . '/app/Http/Controllers/Continentes_PaisesController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
-    'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'App\\Http\\Controllers\\InicioController' => $baseDir . '/app/Http/Controllers/InicioController.php',
+    'App\\Http\\Controllers\\PaisesController' => $baseDir . '/app/Http/Controllers/PaisesController.php',
+    'App\\Models\\Continentes' => $baseDir . '/app/Models/Continentes.php',
+    'App\\Models\\Continentes_Paises' => $baseDir . '/app/Models/Continentes_Paises.php',
+    'App\\Models\\Inicio' => $baseDir . '/app/Models/Inicio.php',
+    'App\\Models\\Paises' => $baseDir . '/app/Models/Paises.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Brick\\Math\\BigDecimal' => $vendorDir . '/brick/math/src/BigDecimal.php',

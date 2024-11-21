@@ -8,24 +8,33 @@ use Illuminate\Http\Request;
 
 class Continentes_PaisesController extends Controller
 {
-    public function criar(Request $request){
-        
-        $continentes = $request->input('continentes');
-        $paises = $request->input('paises');
-
-        $continentesPaises = new Continentes_Paises;
-        $continentesPaises->continentes_id = $continentes;
-        $continentesPaises->paises_id = $paises;
-        $continentesPaises->localizacao = $request->localizacao;
-        $continentesPaises->save();
-
-        return redirect("/listar_continentes_paises");
-    }
     public function formCadastrarContinentesPaises(){
         $paises = Paises::all();
         $continentes = Continentes::all();
         return view("cadastrar_continentes_paises",['paises'=>$paises, 'continentes'=>$continentes]);
     }
+    public function criar(Request $request){
+        
+        $continentes = $request->input('continentes');
+        $paises = $request->input('paises');
+
+        $continentes = Continentes::find($continentes);
+        $paises = Paises::find($paises);
+
+        if (!$continentes || !$paises) {
+    
+            return back()->withErrors('invalido continente ou país.');
+        }
+
+        $continentesPaises = new Continentes_Paises;
+        $continentesPaises->continentes_id = $continentes->id;
+        $continentesPaises->paises_id = $paises->id;
+        $continentesPaises->localizacao = $request->localizacao;
+        $continentesPaises->save();
+
+        return redirect("/listar_continentes_paises");
+    }
+
     public function listar(){
         $continentesPaises = Continentes_Paises::all();
         return view("continentes_paises", ["continentesPaises" => $continentesPaises]);
