@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Continentes_Paises;
 use App\Models\Continentes;
 use Illuminate\Http\Request;
 
@@ -24,5 +25,17 @@ class ContinentesController extends Controller
     public function listar(){
         $continentes = Continentes::all();
         return view("continentes", ["continentes"=> $continentes]);
+    }
+    public function deletar($id){
+        
+        $continentes = Continentes :: find($id);
+        $continentes->continentesPaises->each(function ($continentesPaises){
+        $continentesPaises->delete();
+        });
+        $continentes->delete();
+        
+
+        return redirect("/listar_continentes");
+
     }
 }

@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilo para os "botões" (links transformados em botões) */
+a.button, input[type="submit"].button {
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a.button:hover, input[type="submit"].button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Levanta o botão ao passar o mouse */
+}
+
+/* Efeito de foco nos botões */
+a.button:focus, input[type="submit"].button:focus {
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 5px 2px rgba(76, 175, 80, 0.7); /* Adiciona um destaque quando o botão é focado */
+}
+
+/* Estilos para a tabela */
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para a formatação responsiva */
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    a.button, input[type="submit"].button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

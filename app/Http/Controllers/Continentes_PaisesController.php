@@ -40,5 +40,10 @@ class Continentes_PaisesController extends Controller
         return view("continentes_paises", ["continentesPaises" => $continentesPaises]);
 
     }
-
+    public function deletar($id){
+        $continentesPaises = new Continentes_Paises;
+        $continentesPaises->find($id)->delete();
+        
+        return redirect("/listar_continentes_paises");
+    }
 }
